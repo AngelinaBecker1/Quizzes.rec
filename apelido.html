@@ -1,37 +1,110 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <style>
-        body {
-            background: linear-gradient(to left, #38b6ff, #5170ff, rgb(86, 201, 255));
-            color: rgb(0, 0, 0);
-            font-size: 50px;
-            font-family: 'The Seasons', cursive;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolha seu Apelido</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    body {
+      height: 100vh;
+      background: linear-gradient(to left, #38b6ff, #5170ff, rgb(86, 201, 255));
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .retangulo {
-            background: #5170ff;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-            margin-left: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    .container {
+      background: #ffffff;
+      width: 95%;
+      max-width: 900px;
+      padding: 100px 60px;
+      border-radius: 30px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .titulo {
+      font-size: 42px;
+      color: #000;
+      margin-bottom: 50px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    input {
+      width: 100%;
+      max-width: 600px;
+      height: 90px;
+      border: none;
+      border-radius: 45px;
+      padding: 0 30px;
+      font-size: 28px;
+      background-color: #5555ff;
+      color: white;
+      text-align: center;
+      outline: none;
+      margin-bottom: 40px;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease-in-out;
+
+    }
+
+    input:focus {
+      transform: scale(1.03);
+    }
+
+    button {
+      background-color: #3333cc;
+      color: white;
+      padding: 20px 60px;
+      font-size: 24px;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #000099;
+      transform: scale(1.05);
+    }
+
+    input::placeholder {
+      color: black;
+    }
+  </style>
 </head>
 
 <body>
-    
+  <div class="container">
+    <div class="titulo">▶︎ Escolha o seu apelido ◀︎</div>
+    <div class="letrinha">
+      <input type="text" id="apelido" placeholder="Digite seu apelido" />
+    </div>
+    <br>
+    <button onclick="salvarApelido()">Confirmar</button>
+  </div>
 
+  <script>
+    function salvarApelido() {
+      const apelido = document.getElementById("apelido").value.trim();
+      if (apelido !== "") {
+        localStorage.setItem("apelido", apelido);
+        window.location.href = 'dificuldade.html';
+      } else {
+        alert("Digite um apelido antes de continuar.");
+      }
+    }
+  </script>
 </body>
 
 </html>
