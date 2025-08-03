@@ -29,7 +29,7 @@
             left: -350px;
             font-size: 24px;
             font-weight: bold;
-            color: #0d3a66;
+            color: #000000;
         }
 
         .retangulo {    
@@ -38,15 +38,18 @@
             left: -10px;
             width: 600px;
             height: 300px;
-            background-color: #0b7fcc;
+            background-color: #0976be;
             border-radius: 20px;
+            font-size: 15px;
+            font-family: 'The Seasons', cursive;
+            
            
            
         }
 
         .circulo {
             position: absolute;
-            top: 85px;
+            top: -20px;
             left: -15px;
             width: 90px;
             height: 90px;
@@ -59,19 +62,22 @@
             
         }
 
+        
         .botoes {
             position: absolute;
             bottom: -120px;
             width: 100%;
             text-align: center;
             font-size: 50px;
+            font-size: 100px;
+            top: 280px;
         }
 
         .botoes button {
-            background-color: #0b7fcc;
+            background-color: #0976be;
             color: #1d1d1d;
             border: none;
-            padding: 20px 50px;
+            padding: 20px 35px;
             margin: 0 50px;
             cursor: pointer;
             border-radius: 10px;
@@ -88,6 +94,12 @@
         margin-bottom: 10px;
         margin-top: 45px;
        }
+        .texto {
+          margin-top: 80px;
+          font-size: 24px;
+          text-align: center;
+        }
+
         
     </style>
 </head>
@@ -95,12 +107,14 @@
     <div class="container">
         <h1 class="titulo">É crime ou não é</h1>
         <div class="dificuldade"> nivel medio</div>
-        <div class="retangulo"></div>
+        <div class="retangulo">
         <div class="circulo">?</div>
+        <p class="texto">João invadiu o perfil do Instagram de outra pessoa, trocou a senha e começou a postar mensagens ofensivas usando a conta.</p>
         <div class="botoes">
-            <button>é crime</button>
-            <button>não é</button>
+            <button>É crime</button>
+            <button>Não é</button>
         </div>
+        
     </div>
     
      
