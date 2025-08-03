@@ -1,123 +1,97 @@
 <!DOCTYPE html>
-<html lang="port">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pergunta - nivel medio</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Courier New', Courier, monospace;
-            background: linear-gradient(to left, #38b6ff, #5170ff, rgb(86, 201, 255));
-            display: flex;
-            justify-content: center;
-            height: 100px;
+  <meta charset="UTF-8">
+  <title>Nível Médio - É Crime ou Não É?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+   
 
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 100vh;
+      background: linear-gradient(to left, #38b6ff, #5170ff, rgb(86, 201, 255));
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
 
-        .container {
-            position: relative;
-            width: 600px;
-            height: 400px;
-            background-color: transparent;
-        }
+    .titulo {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #000000;
+      
+    }
 
-        .dificuldade {
-            position: absolute;
-            top: 10px;
-            left: -350px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #000000;
-        }
+    .retangulo {
+      background-color: white;
+      border-radius: 20px;
+      padding: 25px 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      max-width: 600px;
+      text-align: center;
+    }
 
-        .retangulo {    
-            position: absolute;
-            top: 110px;
-            left: -10px;
-            width: 600px;
-            height: 300px;
-            background-color: #ffffff;
-            border-radius: 20px;
-            font-size: 15px;
-            font-family: 'The Seasons', cursive;
-            
-           
-           
-        }
+    .texto {
+      font-size: 30px;
+      color: #333;
+      margin-bottom: 20px;
+    }
 
-        .circulo {
-            position: absolute;
-            top: -20px;
-            left: -15px;
-            width: 90px;
-            height: 90px;
-            background-color: #2b3c88;
-            color: white;
-            font-size: 50px;
-            text-align: center;
-            line-height: 80px;
-            border-radius: 50%;
-            
-        }
+    .botoes {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      top: 10px;
+    }
 
-        
-        .botoes {
-            position: absolute;
-            bottom: -120px;
-            width: 100%;
-            text-align: center;
-            font-size: 50px;
-            font-size: 100px;
-            top: 280px;
-        }
+    button {
+      background-color: #0088f7;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 100px;
+    }
 
-        .botoes button {
-            background-color: #ffffff;
-            color: #1d1d1d;
-            border: none;
-            padding: 20px 35px;
-            margin: 0 50px;
-            cursor: pointer;
-            border-radius: 10px;
-        }
-
-        .botoes button:hover {
+     .botoes button:hover {
             background-color: #0160ad;
         }
 
-       .titulo {
-        text-align: center; 
-        font-size: 30px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        margin-top: 45px;
-       }
-        .texto {
-          margin-top: 80px;
-          font-size: 24px;
-          text-align: center;
-        }
 
-        
-    </style>
+    .nivel {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #003366;
+      padding: 8px 16px;
+      border-radius: 15px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="titulo">É crime ou não é</h1>
-        <div class="dificuldade"> nivel medio</div>
-        <div class="retangulo">
-        <div class="circulo">?</div>
-        <p class="texto">Ana criou um perfil falso no TikTok apenas para acompanhar celebridades e assistir vídeos, sem interagir com ninguém.</p>
-        <div class="botoes">
-            <button>É crime</button>
-            <button>Não é</button>
-        </div>
-        
+
+    <div class="nivel">Nível Médio</div>
+    <div class="titulo">É crime ou não é?</div>
+    <div class="retangulo">
+    <div class="texto">
+    <p>Ana criou um perfil falso no Tik tok apenas para acompanhar celebridades e assistir videos, sem interagir com ninguem.</p>
+    <div class="botoes">
+      <button>É crime</button>
+      <button>Não é crime</button>
     </div>
-    
-     
-    
+  </div>
+
 </body>
-</html
+</html>
