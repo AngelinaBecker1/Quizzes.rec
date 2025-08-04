@@ -78,11 +78,27 @@
       padding: 8px 16px;
       border-radius: 15px;
     }
+    
+    .feedback {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: rgba(0, 0, 0, 0.8);
+     color: white;
+     padding: 20px;
+     border-radius: 10px;
+     font-size: 24px;
+     display: none;
+     z-index: 1000;
+     width: 80%;
+     text-align: center;
+        }
 
    
-  </style>
-</head>
-<body>
+    </style>
+    </head>
+    <body>
 
     <div class="nivel">Nível Difícil</div>
     <div class="titulo">É crime ou não é?</div>
@@ -90,10 +106,46 @@
     <div class="texto">
     <p>Um adolescente baixa um filme recente de um site pirata para assistir em casa com a família. Ele não vende, nem compartilha o arquivo com outras pessoas</p>
     <div class="botoes">
-      <button>É crime</button>
-      <button>Não é crime</button>
+    <button onclick="verificarResposta(true)">É crime</button>
+    <button onclick="verificarResposta(false)">Não é</button>
     </div>
-  </div>
+
+    <div class="feedback" id="feedbackCorreto" style="display: none;">
+                Correto! Avançando para a próxima pergunta...
+    </div>
+    <div class="feedback" id="feedbackIncorreto" style="display: none;">
+                Incorreto! Tente novamente.
+    </div>
+    </div>
+    </div>
+    <script>
+      const RESPOSTA_CORRETA = true;
+
+      function verificarResposta(respostaUsuario) {
+      const feedbackCorreto = document.getElementById('feedbackCorreto');
+      const feedbackIncorreto = document.getElementById('feedbackIncorreto');
+
+          
+          feedbackCorreto.style.display = 'none';
+          feedbackIncorreto.style.display = 'none';
+
+          if (respostaUsuario === RESPOSTA_CORRETA) {
+              feedbackCorreto.style.display = 'block';
+
+              
+              setTimeout(function () {
+                  window.location.href = 'nivel facil2.html'; 
+              }, 2000);
+          } else {
+              feedbackIncorreto.style.display = 'block';
+
+              
+              setTimeout(function () {
+                  feedbackIncorreto.style.display = 'none';
+              }, 2000);
+          }
+      }
+  </script>
    
 
 </body>
