@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Nível Médio - É Crime ou Não É?</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   <style>
-   
-
     body {
       margin: 0;
       padding: 0;
@@ -26,14 +25,14 @@
       font-weight: bold;
       margin-bottom: 30px;
       color: #000000;
-      
+
     }
 
     .retangulo {
       background-color: white;
       border-radius: 20px;
       padding: 25px 30px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
       max-width: 600px;
       text-align: center;
     }
@@ -63,9 +62,9 @@
       margin-top: 100px;
     }
 
-     .botoes button:hover {
-            background-color: #0160ad;
-        }
+    .botoes button:hover {
+      background-color: #0160ad;
+    }
 
 
     .nivel {
@@ -78,20 +77,77 @@
       padding: 8px 16px;
       border-radius: 15px;
     }
+
+    .feedback {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 24px;
+      display: none;
+      z-index: 1000;
+      width: 80%;
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
 
-    <div class="nivel">Nível Médio</div>
-    <div class="titulo">É crime ou não é?</div>
-    <div class="retangulo">
+  <div class="nivel">Nível Médio</div>
+  <div class="titulo">É crime ou não é?</div>
+  <div class="retangulo">
     <div class="texto">
-    <p>Ana criou um perfil falso no Tik tok apenas para acompanhar celebridades e assistir videos, sem interagir com ninguem.</p>
-    <div class="botoes">
-      <button>É crime</button>
-      <button>Não é crime</button>
+      <p>Ana criou um perfil falso no Tik tok apenas para acompanhar celebridades e assistir videos, sem interagir com
+        ninguem.</p>
+      <div class="botoes">
+        <button onclick="verificarResposta(false)">É crime</button>
+        <button onclick="verificarResposta(true)">Não é</button>
+      </div>
+
+      <div class="feedback" id="feedbackCorreto" style="display: none;">
+        Correto! Avançando para o resultado final...
+      </div>
+      <div class="feedback" id="feedbackIncorreto" style="display: none;">
+        Incorreto! Tente novamente
+      </div>
     </div>
   </div>
 
+  <script>
+    const RESPOSTA_CORRETA = true;
+
+    function verificarResposta(respostaUsuario) {
+      const feedbackCorreto = document.getElementById('feedbackCorreto');
+      const feedbackIncorreto = document.getElementById('feedbackIncorreto');
+
+
+      feedbackCorreto.style.display = 'none';
+      feedbackIncorreto.style.display = 'none';
+
+      if (respostaUsuario === RESPOSTA_CORRETA) {
+        feedbackCorreto.style.display = 'block';
+
+
+        setTimeout(function () {
+          window.location.href = 'acertos2.html';
+        }, 2000);
+      }
+      else {
+        feedbackIncorreto.style.display = 'block';
+
+
+        setTimeout(function () {
+          feedbackIncorreto.style.display = 'none';
+        }, 2000);
+      }
+    }
+  </script>
+
 </body>
+
 </html>
