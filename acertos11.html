@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado Final</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+     background: linear-gradient(to left, #38b6ff, #5170ff, rgb(86, 201, 255));
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .resultado-container {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      max-width: 400px;
+      margin-left: -65px;
+    }
+
+    .resultado-container h1 {
+      font-size: 26px;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .resultado-container p {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .emoji {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .botao {
+      padding: 12px 25px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .botao:hover {
+      background-color: #388e3c;
+      transform: scale(1.05);
+    }
+
+    .dicas {
+        margin-top: 350px;
+        margin-left: -329px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="resultado-container">
+    <div class="emoji">🏆✅</div>
+    <h1>Você acertou 2 de 2!</h1>
+    <p>Parabéns!</p>
+    <button class="botao" onclick="window.location.href='nivel facil.html'"> Jogar de novo</button>
+    <button class="botao" onclick="window.location.href='dificuldade.html'"> tentar outro nivel</button>
+  </div>
+    <div class="dicas">
+        <button onclick="window.location.href='dicas.html'"> dicas de prevenção a crimes ciberneticos</button>
+    </div>
+
+</body>
+</html>
