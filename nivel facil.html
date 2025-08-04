@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Nível Difícil - É Crime ou Não É?</title>
+    <title>Nível Fácil - É Crime ou Não É?</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <style>
         body {
@@ -98,7 +98,7 @@
 
 <body>
 
-    <div class="nivel">Nível Facil</div>
+    <div class="nivel">Nível Fácil</div>
     <div class="titulo">É crime ou não é?</div>
     <div class="retangulo">
         <div class="texto">
@@ -112,7 +112,7 @@
                 Correto! Avançando para a próxima pergunta...
             </div>
             <div class="feedback" id="feedbackIncorreto" style="display: none;">
-                Incorreto! Tente novamente.
+                Incorreto! Tente novamente
             </div>
         </div>
     </div>
@@ -135,7 +135,8 @@
                 setTimeout(function () {
                     window.location.href = 'nivel facil2.html'; 
                 }, 2000);
-            } else {
+            } 
+            else {
                 feedbackIncorreto.style.display = 'block';
 
                 
