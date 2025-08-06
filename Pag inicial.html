@@ -1,66 +1,98 @@
 <!DOCTYPE html>
-<html lang="port">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz</title>
+  <style>
+    body {
+      background: linear-gradient(to left, #38b6ff, #002fff, #3baffc);
+      color: rgb(0, 0, 0);
+      font-size: 60px;
+      font-family: 'The Seasons', cursive;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      background-image: url('https://i.pinimg.com/736x/42/a0/97/42a0972003fcf152b4fa14171aaa9d36.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right center;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      mix-blend-mode: lighten;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 50px;
+      height: 100%;
+      justify-content: center;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 80px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 30px;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+
+    button {
+      font-size: 30px;
+      border-radius: 20px;
+      background-color: #123cf6;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1336c3;
+      transform: scale(1.05);
+    }
+
+    .credits {
+      position: absolute;
+      bottom: 20px;
+      left: 50px;
+      font-size: 20px;
+    }
+  </style>
 </head>
-<style>
-  body {
-    background: linear-gradient(to left, #38b6ff, #5170ff, rgb(86, 201, 255));
-    color: rgb(0, 0, 0);
-    font-size: 60px;
-    font-family: 'The Seasons', cursive;
-  }
-  h1{
-    margin-top: 70px;
-  
-   }
-   h2 {
-    margin-top: -100px;
-   }
-   p {
-    font-size: 40px;
-    margin-top: 0;        
-    position: relative;
-    top: -75px; 
-    
-   }
-   button {
-    margin-top: 0;
-    position: relative;
-    top: -60px; 
-    font-size: 45px;
-    border-radius: 20px;
-    background-color: #264eff;
-   }
-   h3 {
-    font-size: 20px;
-    margin-top: 0;
-    position: relative;
-    top: -500px; 
-   }
-</style>
 
 <body>
-  <div>
-    <center>
-      <h1> Quizzes </h1>
-      <p>  quem sabe sabe </p>
-      <h2> crimes virtuais </h2>
-      </center>
-
-      <div>
-        <h3> 2 ano DS B </h3>
-      </div>
-   
-
-  </div>
-
-  <div>
-    <center><button class="botao" onclick="window.location.href='apelido.html'">Start</button></center>
-
+  <div class="content">
+    <h1>Quizzes</h1>
+    <h2>crimes virtuais</h2>
+    <p>quem sabe sabe</p>
+    <button class="botao" onclick="window.location.href='apelido.html'">Start</button>
+    <div class="credits">2 ano DS B</div>
   </div>
 </body>
 
