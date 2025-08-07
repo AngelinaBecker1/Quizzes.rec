@@ -20,6 +20,22 @@
             padding: 20px;
         }
 
+        body::before {
+            content: "";
+            background-image: url('https://i.pinimg.com/736x/42/a0/97/42a0972003fcf152b4fa14171aaa9d36.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            opacity: 2.5;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            mix-blend-mode: lighten;
+        }
+
         .titulo {
             font-size: 28px;
             font-weight: bold;
@@ -124,22 +140,22 @@
             const feedbackCorreto = document.getElementById('feedbackCorreto');
             const feedbackIncorreto = document.getElementById('feedbackIncorreto');
 
-            
+
             feedbackCorreto.style.display = 'none';
             feedbackIncorreto.style.display = 'none';
 
             if (respostaUsuario === RESPOSTA_CORRETA) {
                 feedbackCorreto.style.display = 'block';
 
-                
+
                 setTimeout(function () {
-                    window.location.href = 'nivel facil2.html'; 
+                    window.location.href = 'nivel facil2.html';
                 }, 2000);
-            } 
+            }
             else {
                 feedbackIncorreto.style.display = 'block';
 
-                
+
                 setTimeout(function () {
                     feedbackIncorreto.style.display = 'none';
                 }, 2000);
