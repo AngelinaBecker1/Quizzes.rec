@@ -1,74 +1,92 @@
 <!DOCTYPE html>
 <html lang="port-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas</title>
 </head>
 <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to left, #38b6ff, #5170ff, rgb(86, 201, 255));
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to left, #38b6ff, #5170ff, rgb(86, 201, 255));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 
-    .dicas-container {
-      background-color: #ffffff;
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      max-width: 500px;
-      width: 90%;
-      text-align: left;
-    }
+  body::before {
+    content: "";
+    background-image: url('https://i.pinimg.com/736x/42/a0/97/42a0972003fcf152b4fa14171aaa9d36.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    opacity: 2.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    mix-blend-mode: lighten;
+  }
 
-    .dicas-container h2 {
-      text-align: center;
-      color: #1b5e20;
-      font-size: 24px;
-      margin-bottom: 25px;
-    }
+  .dicas-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    text-align: left;
+  }
 
-    ul {
-      padding-left: 20px;
-      color: #333;
-      font-size: 17px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
+  .dicas-container h2 {
+    text-align: center;
+    color: #1b5e20;
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
 
-    ul li {
-      margin-bottom: 12px;
-    }
+  ul {
+    padding-left: 20px;
+    color: #333;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
 
-    .leitura {
-      font-weight: bold;
-      color: #2e7d32;
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
+  ul li {
+    margin-bottom: 12px;
+  }
 
-    .link {
-      color: #00695c;
-      text-decoration: none;
-      font-weight: 500;
-    }
+  .leitura {
+    font-weight: bold;
+    color: #2e7d32;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
 
-    .link:hover {
-      text-decoration: underline;
-    }
+  .link {
+    color: #00695c;
+    text-decoration: none;
+    font-weight: 500;
+  }
 
-    .emoji {
-      font-size: 22px;
-      margin-right: 8px;
-    }
-  </style>
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  .emoji {
+    font-size: 22px;
+    margin-right: 8px;
+  }
+</style>
 </head>
+
 <body>
 
   <div class="dicas-container">
@@ -84,4 +102,5 @@
   </div>
 
 </body>
+
 </html>
