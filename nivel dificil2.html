@@ -20,22 +20,6 @@
       padding: 20px;
     }
 
-    body::before {
-      content: "";
-      background-image: url('https://i.pinimg.com/736x/42/a0/97/42a0972003fcf152b4fa14171aaa9d36.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right center;
-      opacity: 2.5;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      mix-blend-mode: lighten;
-    }
-
     .titulo {
       font-size: 28px;
       font-weight: bold;
@@ -83,9 +67,9 @@
     }
 
 
-    .nivel {
+    .botao-nivel {
       position: absolute;
-      top: 20px;
+      margin-top: -600px;
       left: 20px;
       font-size: 16px;
       color: white;
@@ -114,7 +98,7 @@
 
 <body>
 
-  <div class="nivel">Nível Difícil</div>
+  <button class="botao-nivel" onclick="location.href='dificuldade.html'">Nível Dificil</button>
   <div class="titulo">É crime ou não é?</div>
   <div class="retangulo">
     <div class="texto">
@@ -126,7 +110,7 @@
       </div>
 
       <div class="feedback" id="feedbackCorreto" style="display: none;">
-        Correto! Avançando para a proxima pergunta
+        Correto! Avançando para a proxima pergunta...
       </div>
       <div class="feedback" id="feedbackIncorreto" style="display: none;">
         Incorreto! Tente novamente.
