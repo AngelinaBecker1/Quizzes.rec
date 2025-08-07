@@ -20,6 +20,22 @@
       padding: 20px;
     }
 
+    body::before {
+      content: "";
+      background-image: url('https://i.pinimg.com/736x/42/a0/97/42a0972003fcf152b4fa14171aaa9d36.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right center;
+      opacity: 2.5;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      mix-blend-mode: lighten;
+    }
+
     .titulo {
       font-size: 28px;
       font-weight: bold;
@@ -98,14 +114,14 @@
 
 <body>
 
- 
+
   <button class="botao-nivel" onclick="location.href='dificuldade.html'">Nível Médio</button>
   <div class="titulo">É crime ou não é?</div>
   <div class="retangulo">
     <div class="texto">
-      <p>Fernanda baixou um programa para copiar um jogo pago de forma gratuita no computador dela, 
+      <p>Fernanda baixou um programa para copiar um jogo pago de forma gratuita no computador dela,
         sem autirização da empresa desenvolvedora.
-        </p>
+      </p>
       <div class="botoes">
         <button onclick="verificarResposta(true)">É crime</button>
         <button onclick="verificarResposta(false)">Não é</button>
@@ -153,5 +169,3 @@
 </body>
 
 </html>
-
-
