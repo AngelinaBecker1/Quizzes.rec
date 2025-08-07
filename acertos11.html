@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Resultado Final</title>
@@ -7,7 +8,7 @@
     body {
       margin: 0;
       padding: 0;
-     background: linear-gradient(to left, #38b6ff, #5170ff, rgb(86, 201, 255));
+      background: linear-gradient(to left, #38b6ff, #5170ff, rgb(86, 201, 255));
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       justify-content: center;
@@ -15,12 +16,28 @@
       height: 100vh;
     }
 
+    body::before {
+      content: "";
+      background-image: url('https://i.pinimg.com/736x/42/a0/97/42a0972003fcf152b4fa14171aaa9d36.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right center;
+      opacity: 2.5;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      mix-blend-mode: lighten;
+    }
+
     .resultado-container {
       background: white;
       border-radius: 16px;
       padding: 40px;
       text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       max-width: 400px;
       margin-left: -65px;
     }
@@ -59,12 +76,12 @@
     }
 
     .dicas {
-        margin-top: 350px;
-        margin-left: -329px;
+      margin-top: 350px;
+      margin-left: -329px;
     }
-    
   </style>
 </head>
+
 <body>
 
   <div class="resultado-container">
@@ -74,9 +91,10 @@
     <button class="botao" onclick="window.location.href='nivel facil.html'"> Jogar de novo</button>
     <button class="botao" onclick="window.location.href='dificuldade.html'"> tentar outro nivel</button>
   </div>
-    <div class="dicas">
-        <button onclick="window.location.href='dicas.html'"> dicas de prevenção a crimes ciberneticos</button>
-    </div>
+  <div class="dicas">
+    <button onclick="window.location.href='dicas.html'"> dicas de prevenção a crimes ciberneticos</button>
+  </div>
 
 </body>
+
 </html>
